@@ -28,6 +28,7 @@ const userSlice = createSlice({
             state.loading = false;
             state.user = action.payload;
             state.error = null;
+            console.log(localStorage.getItem('user'));
         });
         builder.addCase(loginUser.rejected, (state, action) => { // Corregir esta línea
             state.loading = false;
