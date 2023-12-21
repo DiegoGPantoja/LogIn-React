@@ -1,5 +1,11 @@
 .App {
+  position: fixed;
+  font-size: 15px;
+  left: 0;
+  top: 0;
   text-align: center;
+  width: 50%;
+  height: 50%;
 }
 
 .App-logo {
@@ -26,6 +32,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.UnOrdered-List{
+  position: relative;
+  top: 50%;
+  
 }
 
 @keyframes App-logo-spin {
