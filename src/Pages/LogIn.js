@@ -1,5 +1,5 @@
-import React, {useState, useSelector} from "react";
-import { useDispatch } from 'react-redux';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from 'react-redux';
 import { loginUser } from '../Store/UserSlice';
 import { useNavigate } from 'react-router-dom'
 import '../styles/Login.css';
@@ -7,8 +7,8 @@ import '../styles/Login.css';
 const Login = () => {
 
     //states
-    const {username, setUsername} = useState('');
-    const {password, setPassword} = useState('');
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
 
     //redux state
     const {loading, error} = useSelector((state) => state.user);
@@ -24,7 +24,7 @@ const Login = () => {
             if(result.payload){
                 setUsername('');
                 setPassword('');
-                navigate('/');
+                navigate('/Home');
             }
         })
     }
